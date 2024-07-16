@@ -1,0 +1,16 @@
+paquete  com . ejemplo . __Literatura . para ;
+
+importar  com . fasterxml . jackson . annotation . JsonAlias ​​;
+importar  com . fasterxml . jackson . annotation . JsonIgnoreProperties ;
+
+importar  java .util .List ;​​
+
+@JsonIgnoreProperties ( ignorarUnknown = verdadero )​
+Libro de datos de registro público (
+        @ JsonAlias ​​( "título" ) Cadena  título ,
+        @ JsonAlias ​​( "autores" ) Lista < DataAuthor > autores ,
+        @ JsonAlias ​​( "idiomas" ) Lista < String > idiomas ,
+        @JsonAlias ( "download_count" ) Número entero de descargas 
+        )
+    {
++}
