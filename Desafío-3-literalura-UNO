@@ -1,0 +1,150 @@
+<? versión xml = " 1.0 " codificación = " UTF-8 " ?>
+< proyecto  xmlns = " http://maven.apache.org/POM/4.0.0 "
+		 xmlns : xsi = " http://www.w3.org/2001/XMLSchema-instance "
+	xsi:schemaLocation= " http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd " >
+	< modeloVersión >4.0.0</ modeloVersión >
+	< padre >
+		< groupId >org.springframework.boot</ groupId >
+		< artefactoId >primavera-inicio-padre</ artefactoId >
+		< versión >3.3.2-INSTANTÁNEA</ versión >
+		< relativePath /> <!-- buscar padre desde el repositorio -->
+	</ padre >
+	< groupId >com.ejemplo</ groupId >
+	< artefactoId >03_Literatura</ artefactoId >
+	< versión >0.0.1-SNAPSHOT</ versión >
+	< nombre >03_Literatura</ nombre >
+	< description >Proyecto de demostración para Spring Boot</ description >
+	< url />
+	< licencias >
+		< licencia />
+	</ licencias >
+	< desarrolladores >
+		< desarrollador />
+	</ desarrolladores >
+	<scm>​​
+		< conexión />
+		<conexionDesarrollador>​​
+		< etiqueta />
+		< url />
+	</scm>​​
+
+	< propiedades >
+		< java .version>17</ java .version>
+		< maven .compiler.source>17</ maven .compiler.source>
+		< maven .compiler.target>17</ maven .compiler.target>
+		< spring-boot .version>3.3.2-SNAPSHOT</ spring-boot .version> <!-- Asegúrate de tener una versión específica de Spring Boot -->
+	</ propiedades >
+
+	< gestióndedependencias >
+		< dependencias >
+			< dependencia >
+				< groupId >org.springframework.boot</ groupId >
+				< artefactoId >dependencias de spring boot</ artefactoId >
+				< versión > ${spring-boot.version} </ versión >
+				< tipo >pom</ tipo >
+				< ámbito >importación</ ámbito >
+			</ dependencia >
+		</ dependencias >
+	</ gestióndedependencias >
+
+	< dependencias >
+		<!-- Datos de inicio de Spring Boot JPA -->
+		< dependencia >
+			< groupId >org.springframework.boot</ groupId >
+			< artefactoId >datos de inicio de spring-boot-jpa</ artefactoId >
+		</ dependencia >
+		<!-- Arrancador de Spring Boot WebFlux -->
+		< dependencia >
+			< groupId >org.springframework.boot</ groupId >
+			< artefactoId >inicio de arranque de primavera webflux</ artefactoId >
+		</ dependencia >
+
+		<!-- Web de inicio de Spring Boot -->
+		< dependencia >
+			< groupId >org.springframework.boot</ groupId >
+			< artefactoId >inicio de arranque de spring boot</ artefactoId >
+		</ dependencia >
+
+		< dependencia >
+			< groupId >org.springframework.boot</ groupId >
+			< artefactoId >herramientas de desarrollo spring-boot</ artefactoId >
+			< ámbito >tiempo de ejecución</ ámbito >
+			< opcional >verdadero</ opcional >
+		</ dependencia >
+		<!-- Controlador JDBC de PostgreSQL -->
+		< dependencia >
+			< groupId >org.postgresql</ groupId >
+			< artefactoId >postgresql</ artefactoId >
+			< ámbito >tiempo de ejecución</ ámbito >
+		</ dependencia >
+		<!-- Jackson para procesamiento JSON -->
+		< dependencia >
+			< groupId >com.fasterxml.jackson.core</ groupId >
+			< artefactoId >enlace de datos de jackson</ artefactoId >
+		</ dependencia >
+		<!-- Prueba de inicio de Spring Boot -->
+		< dependencia >
+			< groupId >org.springframework.boot</ groupId >
+			< artefactoId >prueba de arranque de spring boot</ artefactoId >
+			< ámbito >prueba</ ámbito >
+		</ dependencia >
+		<!-- Validación de inicio de Spring Boot -->
+		< dependencia >
+			< groupId >org.springframework.boot</ groupId >
+			< artefactoId >validación de arranque de spring boot</ artefactoId >
+		</ dependencia >
+		<!-- Dependencia de Jansi -->
+		< dependencia >
+			< groupId >org.fusesource.jansi</ groupId >
+			< artefactoId >jansi</ artefactoId >
+			< versión >2.0.1</ versión >
+		</ dependencia >
+		< dependencia >
+			< groupId >com.ejemplo</ groupId >
+			< artefactoId >03_Literatura</ artefactoId >
+			< versión >0.0.1-SNAPSHOT</ versión >
+		</ dependencia >
+
+		< dependencia >
+			< groupId >org.proyectolombok</ groupId >
+			< artefactoId >lombok</ artefactoId >
+			< opcional >verdadero</ opcional >
+		</ dependencia >
+	</ dependencias >
+
+	< construir >
+		< complementos >
+			< complemento >
+				< groupId >org.springframework.boot</ groupId >
+				< artefactoId >complemento spring-boot-maven</ artefactoId >
+				< configuración >
+					< excluye >
+						< excluir >
+							< groupId >org.proyectolombok</ groupId >
+							< artefactoId >lombok</ artefactoId >
+						</ excluir >
+					</ excluye >
+				</ configuración >
+			</complemento>​​
+		</complementos>​​
+	</construir>​​
+	< repositorios >
+		< repositorio >
+			< id >instantáneas de primavera</ id >
+			< name >Instantáneas de primavera</ name >
+			<url> https://repo.spring.io/snapshot </url>​​
+			< comunicados >
+				< habilitado >falso</ habilitado >
+			</ comunicados >
+		</ repositorio >
+	</ repositorios >
+	< pluginRepositories >
+		< pluginRepository >
+			< id >instantáneas de primavera</ id >
+			< name >Instantáneas de primavera</ name >
+			<url> https://repo.spring.io/snapshot </url>​​
+			< comunicados >
+				< habilitado >falso</ habilitado >
+			</ comunicados >
+		</ pluginRepository >
+	</ pluginRepositories >
