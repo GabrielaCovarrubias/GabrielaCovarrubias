@@ -1,0 +1,12 @@
+paquete  com . ejemplo . __Literatura . para ;
+
+importar  com . fasterxml . jackson . annotation . JsonAlias ​​;
+importar  com . fasterxml . jackson . annotation . JsonIgnoreProperties ;
+
+@JsonIgnoreProperties ( ignorarUnknown = verdadero )​
+registro público DataAuthor (
+        @JsonAlias ( " nombre" ) Cadena  nombre ,
+        @JsonAlias ( "birth_year " ) Entero fechaDeNacimiento , 
+        @JsonAlias ( "death_year " ) Entero fechaDeFallecimiento 
+        )
+    {
