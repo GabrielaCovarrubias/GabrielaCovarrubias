@@ -1,0 +1,26 @@
+paquete  com . ejemplo . __Literatura ;
+
+importar  com . ejemplo . __Literatura . principal . Principal ;
+importar  com . ejemplo . __Literatura . repositorio .*;
+importar  org . springframework . beans . factory . annotation . Autowired ;
+importar  org . springframework . boot . CommandLineRunner ;
+importar  org . springframework . boot . SpringApplication ;
+importar  org . springframework . boot . autoconfigure . SpringBootApplication ;
+
+@ Aplicación SpringBoot
+ clase  pública Aplicación  implementa  CommandLineRunner {
+	@Autowired​
+	LibroRepositorio  libroRepositorio ;
+	@Autowired​
+	AutorRepositorio  autorRepositorio ;
+
+	public  static  void  principal ( cadena [] argumentos ) {
+		SpringApplication . run ( Aplicación . clase , argumentos );
+	}
+
+	@ Anular
+	public  void  run ( String ... args ) lanza  una excepción {
+		Principal  principal = new  Principal ( libroRepositorio , autorRepositorio );
+		principal .mostrarMenu ( );
+	}
+}
